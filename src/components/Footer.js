@@ -1,18 +1,14 @@
-import React from 'react'
+import React from "react";
 
 const Footer = () => {
   return (
-    <footer>
-      <nav>
-        <ul>
-          <li>
-            <a href="http://instagram.com" rel='noopener noreferrer'>IG</a>
-          </li>
-        </ul>
-      </nav>
-      <p>Copyright Alkemy Challenge</p>
+    <footer className="bg-dark">
+      <div className="text-white p-4">
+        <h2>Skill Up</h2>
+        <h2>Copyright Alkemy Challenge</h2>
+      </div>
     </footer>
-  )
-}
+  );
+};
 
-export default Footer
+export default Footer;

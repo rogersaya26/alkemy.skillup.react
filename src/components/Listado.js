@@ -24,12 +24,12 @@ const Listado = ( props ) => {
   return (
     <>
     {!token && <Navigate replace to='/' />}
-      <div className="row">
+      <div className="bg-secondary row m-0">
       {
       moviesList.map((oneMovie, idx) => {
         return(
-          <div className="col-2" key={idx}>
-          <div className="card my-4">
+          <div className="col-3 mt-4" key={idx}>
+          <div className="card my-2">
             <button className="favourite-btn"
             onClick={props.addOrRemoveFromFavs}
             data-movie-id = {oneMovie.id}
@@ -38,7 +38,7 @@ const Listado = ( props ) => {
             <div className="card-body">
               <h5 className="card-title">{oneMovie.title.substring(0,30)}...</h5>
               <p className="card-text">{oneMovie.overview.substring(0,100)}...</p>
-              <Link to={`/detalle?movieID=${oneMovie.id}`} className="btn btn-primary">
+              <Link to={`/detalle?movieID=${oneMovie.id}`} className="btn btn-success">
                 View detail
               </Link>
             </div>

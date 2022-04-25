@@ -24,10 +24,10 @@ const Buscador = () => {
   }
   return (
     <form className='d-flex align-items-center' onSubmit={submitHandler} >
-      <label className='form-label mb-0 mx-2'>
+      <label className='form-label mb-0'>
         <input className='form-control' type="text" name='keyword' placeholder='Buscar...' />
       </label>
-      <button type='submit' className='btn btn-success'>Buscar</button>
+      <button type='submit' className='btn btn-secondary mx-2 mr-2 '>Buscar</button>
     </form>
   )
 }

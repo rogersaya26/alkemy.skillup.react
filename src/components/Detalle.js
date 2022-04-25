@@ -31,10 +31,10 @@ const Detalle = () => {
       {movie && (
         <>
           <h2>Titulo: {movie.title}</h2>
-          <div className="row">
+          <div className="row m-0">
             <div className="col-4">
               <img
-                className="img-fluid"
+                className="img-fluid my-2"
                 src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`}
                 alt="Poster Movies"
               />

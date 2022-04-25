@@ -17,12 +17,12 @@ const Favoritos = (props) => {
   return (
     <>
     {!token && <Navigate replace to='/' />}
-      <div>Favoritos</div>
-      <div className="row">
+      <div className="row bg-secondary m-0">
+      <h3 className="m-0 mt-3 px-5 text-white">Estas en Favoritos</h3>
         { !props.favorites.length && <div className="col-12 text-danger">No tienes nada en favoritos</div> }
         {props.favorites.map((oneMovie, idx) => {
           return (
-            <div className="col-2" key={idx}>
+            <div className="col-3" key={idx}>
               <div className="card my-4">
                 <button
                   className="favourite-btn"
