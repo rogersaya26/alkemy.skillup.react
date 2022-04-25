@@ -1,8 +1,9 @@
 import React from 'react'
 import swAlert from '@sweetalert/with-react'
-import {  useNavigate } from 'react-router-dom'
+import {  useNavigate, Navigate } from 'react-router-dom'
 
 const Buscador = () => {
+  let token = sessionStorage.getItem("token");
   const navigator = useNavigate()
   const submitHandler = e => {
     //preventDefault() para que no se refresque la pagina al enviar el formulario
@@ -13,7 +14,10 @@ const Buscador = () => {
       swAlert(<h5>Tienes que escribir una palabra clave</h5>)
     } else if(keyword.length < 4 ) {
       swAlert(<h5>Tienes que escribir mas de 4 caracteres</h5>)
-    } else {
+    } else if(!token) {
+      <Navigate replace to='/' />
+      swAlert(<h5>Deber Iniciar Session</h5>)
+    }else {
       e.currentTarget.keyword.value = ''
       navigator(`/resultados?keyword=${keyword}`)
     }

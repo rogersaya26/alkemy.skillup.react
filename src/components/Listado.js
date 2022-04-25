@@ -1,11 +1,10 @@
 import React from "react";
 import axios from "axios";
 import { useEffect, useState } from "react";
-import { Navigate, Link, useNavigate, useParams } from "react-router-dom";
+import { Navigate, Link } from "react-router-dom";
 import swAlert from '@sweetalert/with-react'
 
 const Listado = ( props ) => {
-
   let token = sessionStorage.getItem("token");
 
   const [moviesList, setMoviesList] = useState([]);
@@ -22,8 +21,6 @@ const Listado = ( props ) => {
     })
   }, [setMoviesList]);
 
-  console.log(moviesList)
-
   return (
     <>
     {!token && <Navigate replace to='/' />}
@@ -31,9 +28,12 @@ const Listado = ( props ) => {
       {
       moviesList.map((oneMovie, idx) => {
         return(
-          <div className="col-3" key={idx}>
+          <div className="col-2" key={idx}>
           <div className="card my-4">
-            <button className="favourite-btn" onClick={props.addOrRemoveFromFavs}>❤</button>
+            <button className="favourite-btn"
+            onClick={props.addOrRemoveFromFavs}
+            data-movie-id = {oneMovie.id}
+            >❤</button>
             <img src={ "https://image.tmdb.org/t/p/w500" + oneMovie.poster_path} className="card-img-top" alt="..." />
             <div className="card-body">
               <h5 className="card-title">{oneMovie.title.substring(0,30)}...</h5>
