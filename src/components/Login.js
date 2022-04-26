@@ -48,8 +48,8 @@ const Login = () => {
   return (
     <>
       {token && <Navigate replace to="/listado" />}
-      <h2>Formulario de Login</h2>
-      <form onSubmit={submitHandler}>
+      <h2 className="pt-5 ps-5">Formulario de Login</h2>
+      <form onSubmit={submitHandler} className="w-100 my-5 px-5 fs-4 font-monospace" >
         <label>
           <span>Correo Electrónico</span>
           <br />

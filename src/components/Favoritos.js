@@ -4,6 +4,8 @@ import { Navigate } from "react-router-dom";
 
 const Favoritos = (props) => {
   let token = sessionStorage.getItem("token");
+
+
   /* const [favorites, setFavorites] = useState([]);
 
   useEffect(() => {

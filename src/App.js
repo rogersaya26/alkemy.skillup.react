@@ -7,6 +7,7 @@ import Detalle from "./components/Detalle";
 import Login from "./components/Login";
 import Resultados from "./components/Resultados";
 import Favoritos from "./components/Favoritos";
+import Contacto from "./components/Contacto";
 
 function App() {
 
@@ -64,6 +65,7 @@ if(favsMovies === null) {
         <Route path="/listado" element={<Listado addOrRemoveFromFavs={addOrRemoveFromFavs} />} />
         <Route path="/detalle" element={<Detalle />} />
         <Route path="/resultados" element={<Resultados />} />
+        <Route path="/contacto" element={<Contacto />} />
         <Route path="/favoritos" element={<Favoritos favorites={favorites} addOrRemoveFromFavs={addOrRemoveFromFavs} />} />
       </Routes>
       <Footer />

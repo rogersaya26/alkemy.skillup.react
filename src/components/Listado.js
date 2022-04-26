@@ -23,7 +23,7 @@ const Listado = ( props ) => {
 
   return (
     <>
-    {!token && <Navigate replace to='/' />}
+    {!token && <Navigate replace to='/' /> }
       <div className="bg-secondary row m-0">
       {
       moviesList.map((oneMovie, idx) => {
